@@ -469,6 +469,7 @@ template<class Key, class Value>
 void BinarySearchTree<Key, Value>::insert(const std::pair<const Key, Value> &keyValuePair)
 {
     // TODO
+    
     const Key& newKey = keyValuePair.first;
     const Value& newVal = keyValuePair.second;
 
@@ -500,7 +501,11 @@ void BinarySearchTree<Key, Value>::insert(const std::pair<const Key, Value> &key
     else {
         tempParent->setRight(newNode);
     }
+    
+
 }
+
+
 
 
 /**
@@ -512,6 +517,7 @@ template<typename Key, typename Value>
 void BinarySearchTree<Key, Value>::remove(const Key& key)
 {
     // TODO
+    
     Node<Key, Value>* nodeToDel = internalFind(key);
     if (nodeToDel == nullptr) { // if the key isn't found
         return;
